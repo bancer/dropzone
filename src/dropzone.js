@@ -235,6 +235,7 @@ export default class Dropzone extends Emitter {
         }
         this.hiddenFileInput = document.createElement("input");
         this.hiddenFileInput.setAttribute("type", "file");
+        this.hiddenFileInput.setAttribute("form", this.element.id);
         if (this.options.maxFiles === null || this.options.maxFiles > 1) {
           this.hiddenFileInput.setAttribute("multiple", "multiple");
         }
